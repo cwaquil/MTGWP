@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Deployment xmlns="http://schemas.microsoft.com/windowsphone/2014/deployment" AppPlatformVersion="8.1">
+  <DefaultLanguage xmlns="" code="en-US"/>
+  <App xmlns="" ProductID="{57691c62-9fd1-4af4-86a6-bcc00956327e}" Title="MTGWindowsPhone" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal"  Author="MTGWindowsPhone author" Description="Sample description" SDOptOut ="false" BackUpOptOut ="false" Publisher="MTGWindowsPhone" PublisherID="{b4c61755-ff96-49e9-8d5d-d5dfdfa7d13c}">
+    <IconPath IsRelative="true" IsResource="false">Assets\ApplicationIcon.png</IconPath>
+    <Capabilities>
+      <Capability Name="ID_CAP_NETWORKING"/>
+      <Capability Name="ID_CAP_MEDIALIB_AUDIO"/>
+      <Capability Name="ID_CAP_MEDIALIB_PLAYBACK"/>
+      <Capability Name="ID_CAP_SENSORS"/>
+      <Capability Name="ID_CAP_WEBBROWSERCOMPONENT"/>
+    </Capabilities>
+    <Tasks>
+      <DefaultTask Name ="_default" NavigationPage="MainPage.xaml" ActivationPolicy="Resume"/>
+    </Tasks>
+    <Tokens>
+      <PrimaryToken TokenID="MTGWindowsPhoneToken" TaskName="_default">
+        <TemplateFlip>
+          <SmallImageURI IsRelative="true" IsResource="false">Assets\Tiles\FlipCycleTileSmall.png</SmallImageURI>
+          <Count>0</Count>
+          <BackgroundImageURI IsRelative="true" IsResource="false">Assets\Tiles\FlipCycleTileMedium.png</BackgroundImageURI>
+          <Title>MTGWindowsPhone</Title>
+          <BackContent></BackContent>
+          <BackBackgroundImageURI></BackBackgroundImageURI>
+          <BackTitle></BackTitle>
+          <DeviceLockImageURI></DeviceLockImageURI>
+          <HasLarge></HasLarge>
+        </TemplateFlip>
+      </PrimaryToken>
+    </Tokens>
+    <ScreenResolutions>
+      <ScreenResolution Name="ID_RESOLUTION_WVGA"/>
+      <ScreenResolution Name="ID_RESOLUTION_WXGA"/>
+      <ScreenResolution Name="ID_RESOLUTION_HD720P"/>
+    </ScreenResolutions>
+  </App>
+</Deployment>
