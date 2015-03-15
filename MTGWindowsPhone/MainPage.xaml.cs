@@ -22,20 +22,36 @@ namespace MTGWindowsPhone
             //BuildLocalizedApplicationBar();
         }
 
-        // Sample code for building a localized ApplicationBar
-        //private void BuildLocalizedApplicationBar()
-        //{
-        //    // Set the page's ApplicationBar to a new instance of ApplicationBar.
-        //    ApplicationBar = new ApplicationBar();
+        private void btnGreen_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Visualizacoes/Info.xaml?titulo=",
+                UriKind.RelativeOrAbsolute));
+        }
 
-        //    // Create a new button and set the text value to the localized string from AppResources.
-        //    ApplicationBarIconButton appBarButton = new ApplicationBarIconButton(new Uri("/Assets/AppBar/appbar.add.rest.png", UriKind.Relative));
-        //    appBarButton.Text = AppResources.AppBarButtonText;
-        //    ApplicationBar.Buttons.Add(appBarButton);
+        private void btnBlack_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Visualizacoes/Buscar.xaml?titulo=",
+                UriKind.RelativeOrAbsolute));
+        }
 
-        //    // Create a new menu item with the localized string from AppResources.
-        //    ApplicationBarMenuItem appBarMenuItem = new ApplicationBarMenuItem(AppResources.AppBarMenuItemText);
-        //    ApplicationBar.MenuItems.Add(appBarMenuItem);
-        //}
+        private void btnBlue_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Visualizacoes/Moeda.xaml?titulo=",
+                UriKind.RelativeOrAbsolute));
+        }
+
+        private void btnRed_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Visualizacoes/Dado.xaml?titulo=",
+                UriKind.RelativeOrAbsolute));
+        }
+
+        private void btnWhite_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Visualizacoes/Wishlist.xaml?titulo=",
+                UriKind.RelativeOrAbsolute));
+        }
+
+        
     }
 }
