@@ -116,6 +116,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AppResources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Entidades\TappedRoutedEventArgs.cs" />
     <Compile Include="Visualizacoes\Wishlist.xaml.cs">
       <DependentUpon>Wishlist.xaml</DependentUpon>
     </Compile>
@@ -169,11 +170,13 @@
     <Content Include="Assets\BadgeLogo.png" />
     <Content Include="Assets\Buttons\mtgblack.png" />
     <Content Include="Assets\Buttons\mtgblue.png" />
+    <Content Include="Assets\Buttons\mtgbuscar.png" />
     <Content Include="Assets\Buttons\mtggreen.png" />
     <Content Include="Assets\Buttons\mtgred.png" />
     <Content Include="Assets\Buttons\mtgwhite.png" />
-    <Content Include="Assets\Buttons\mtg_buscar.png" />
     <Content Include="Assets\Logo.png" />
+    <Content Include="Assets\Moeda\moeda1.png" />
+    <Content Include="Assets\Moeda\moeda3.png" />
     <Content Include="Assets\SplashScreen.png" />
     <Content Include="Assets\Splash\splashmagic.png" />
     <Content Include="Assets\SquareTile150x150.png" />
@@ -204,7 +207,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controles\" />
-    <Folder Include="Entidades\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />

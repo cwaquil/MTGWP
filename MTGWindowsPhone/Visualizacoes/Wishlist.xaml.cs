@@ -10,20 +10,11 @@ using Microsoft.Phone.Shell;
 
 namespace MTGWindowsPhone.Entidades
 {
-    public partial class Buscar : PhoneApplicationPage
+    public partial class Wishlist : PhoneApplicationPage
     {
-        public Buscar()
+        public Wishlist()
         {
             InitializeComponent();
         }
-
-        private void btnBuscar_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        
-
-       
     }
 }
