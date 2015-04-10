@@ -88,6 +88,11 @@
                    Source="Assets/Buttons/mtgwhite.png" />
                 </Grid>
             </Button>
+            <TextBlock HorizontalAlignment="Left" Margin="192,222,0,0" TextWrapping="Wrap" Text="Buscar" VerticalAlignment="Top"/>
+            <TextBlock HorizontalAlignment="Left" Margin="320,329,0,0" TextWrapping="Wrap" Text="Moeda" VerticalAlignment="Top"/>
+            <TextBlock HorizontalAlignment="Left" Margin="265,458,0,0" TextWrapping="Wrap" Text="Dado" VerticalAlignment="Top"/>
+            <TextBlock HorizontalAlignment="Left" Margin="137,458,0,0" TextWrapping="Wrap" Text="Info" VerticalAlignment="Top"/>
+            <TextBlock HorizontalAlignment="Left" Margin="58,329,0,0" TextWrapping="Wrap" Text="WishList" VerticalAlignment="Top"/>
 
         </Grid>
 

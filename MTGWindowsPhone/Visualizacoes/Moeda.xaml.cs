@@ -7,6 +7,7 @@ using System.Windows.Controls;
 using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
+using System.Windows.Media.Imaging;
 
 namespace MTGWindowsPhone.Entidades
 {
@@ -14,24 +15,18 @@ namespace MTGWindowsPhone.Entidades
     public partial class Moeda : PhoneApplicationPage
     {
 
-        bool coinFlip = false;
+        
         public Moeda()
         {
             this.InitializeComponent();
         }
-
-        private void GridCard_Tapped(Object sender, TappedRoutedEventArgs e)
+                
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if (coinFlip == false)
-            {
-                Storyboard1.Begin();
-                coinFlip = true;
-            }
-            else
-            {
-                Storyboard2.Begin();
-                coinFlip = false;
-            }
+            Random num = new Random();
+            int Number = num.Next(1, 3);
+            BitmapImage Img = new BitmapImage(new Uri(@"/Assets/Moeda/moeda"+Number.ToString()+".png", UriKind.Relative));
+            moeda1.Source = Img;
         }
     }
 
