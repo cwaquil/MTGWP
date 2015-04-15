@@ -168,6 +168,7 @@
     <Content Include="Assets\ApplicationIcon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Assets\Background.png" />
     <Content Include="Assets\BadgeLogo.png" />
     <Content Include="Assets\Buttons\mtgblack.png" />
     <Content Include="Assets\Buttons\mtgblue.png" />

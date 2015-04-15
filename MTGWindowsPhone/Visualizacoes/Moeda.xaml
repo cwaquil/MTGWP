@@ -13,12 +13,35 @@
     mc:Ignorable="d"
     shell:SystemTray.IsVisible="True">
     <phone:PhoneApplicationPage.Resources>
-        <Storyboard x:Name="Storyboard1"/>
-        <Storyboard x:Name="Storyboard2"/>
+        <Storyboard x:Name="Storyboard1">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.RotationX)" Storyboard.TargetName="moeda2">
+                <EasingDoubleKeyFrame KeyTime="0" Value="90"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="90"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="90"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="moeda1">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-100"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-200"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Projection).(PlaneProjection.RotationX)" Storyboard.TargetName="moeda1">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="90"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="90"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="90"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="moeda2">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-100"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-200"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="-100"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
     </phone:PhoneApplicationPage.Resources>
 
     <!--LayoutRoot is the root grid where all page content is placed-->
-    <Grid x:Name="LayoutRoot" Background="Transparent">
+    <Grid x:Name="LayoutRoot" Style="{StaticResource LayoutGridStyle}">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
@@ -32,10 +55,25 @@
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <Image Name="moeda1" Source="/Assets/Moeda/moeda1.png" Margin="93,178,82,232"/>
+            <Image Name="moeda1" Source="/Assets/Moeda/moeda1.png" Margin="87,207,88,203" RenderTransformOrigin="0.5,0.5">
+                <Image.Projection>
+                    <PlaneProjection/>
+                </Image.Projection>
+                <Image.RenderTransform>
+                    <CompositeTransform/>
+                </Image.RenderTransform>
+            </Image>
+            <Image Name="moeda2" Source="/Assets/Moeda/moeda2.png" Margin="87,207,88,203" RenderTransformOrigin="0.5,0.5">
+                <Image.Projection>
+                    <PlaneProjection/>
+                </Image.Projection>
+                <Image.RenderTransform>
+                    <CompositeTransform/>
+                </Image.RenderTransform>
+            </Image>
             <Button Content="Flip Coin"
                     HorizontalAlignment="Left"
-                    Margin="160,555,0,0"
+                    Margin="160,462,0,0"
                     VerticalAlignment="Top"
                     Click="Button_Click" />
         </Grid>

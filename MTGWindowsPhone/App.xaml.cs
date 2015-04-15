@@ -7,6 +7,8 @@ using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using MTGWindowsPhone.Resources;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
 
 namespace MTGWindowsPhone
 {

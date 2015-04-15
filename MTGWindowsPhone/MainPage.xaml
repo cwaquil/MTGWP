@@ -14,7 +14,7 @@
     shell:SystemTray.IsVisible="True">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
-    <Grid x:Name="LayoutRoot" Background="Transparent">
+    <Grid x:Name="LayoutRoot" Style="{StaticResource LayoutGridStyle}" >
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
@@ -34,7 +34,7 @@
                     Height="150"
                     Width="150"
                     BorderThickness="0"
-                    Margin="80,330,226,216">
+                    Margin="80,346,226,200">
                 <Grid>
                     <Image x:Name="btnGreenImage"
                    Source="Assets/Buttons/mtggreen.png" />
@@ -46,7 +46,7 @@
                     Height="150"
                     BorderThickness="0"
                     Width="150"
-                    Margin="145,81,161,465">
+                    Margin="157,80,149,466">
                 <Grid>
                     <Image x:Name="btnBlackImage"
                    Source="Assets/Buttons/mtgblack.png" Margin="0,19,0,-19" />
@@ -58,7 +58,7 @@
                     Height="150"
                     Width="150"
                     BorderThickness="0"
-                    Margin="272,206,34,340">
+                    Margin="284,206,22,340">
                 <Grid>
                     <Image x:Name="btnBlueImage"
                    Source="Assets/Buttons/mtgblue.png" />
@@ -70,7 +70,7 @@
                     Height="150"
                     Width="150"
                     BorderThickness="0"
-                    Margin="215,330,91,216">
+                    Margin="226,346,80,200">
                 <Grid>
                     <Image x:Name="btnRedImage"
                    Source="Assets/Buttons/mtgRed.png" />
@@ -88,10 +88,10 @@
                    Source="Assets/Buttons/mtgwhite.png" />
                 </Grid>
             </Button>
-            <TextBlock HorizontalAlignment="Left" Margin="192,222,0,0" TextWrapping="Wrap" Text="Buscar" VerticalAlignment="Top"/>
-            <TextBlock HorizontalAlignment="Left" Margin="320,329,0,0" TextWrapping="Wrap" Text="Moeda" VerticalAlignment="Top"/>
-            <TextBlock HorizontalAlignment="Left" Margin="265,458,0,0" TextWrapping="Wrap" Text="Dado" VerticalAlignment="Top"/>
-            <TextBlock HorizontalAlignment="Left" Margin="137,458,0,0" TextWrapping="Wrap" Text="Info" VerticalAlignment="Top"/>
+            <TextBlock HorizontalAlignment="Left" Margin="203,222,0,0" TextWrapping="Wrap" Text="Buscar" VerticalAlignment="Top"/>
+            <TextBlock HorizontalAlignment="Left" Margin="328,329,0,0" TextWrapping="Wrap" Text="Moeda" VerticalAlignment="Top"/>
+            <TextBlock HorizontalAlignment="Left" Margin="278,469,0,0" TextWrapping="Wrap" Text="Dado" VerticalAlignment="Top"/>
+            <TextBlock HorizontalAlignment="Left" Margin="137,469,0,0" TextWrapping="Wrap" Text="Info" VerticalAlignment="Top"/>
             <TextBlock HorizontalAlignment="Left" Margin="58,329,0,0" TextWrapping="Wrap" Text="WishList" VerticalAlignment="Top"/>
 
         </Grid>

@@ -7,6 +7,14 @@
 
     <!--Application Resources-->
     <Application.Resources>
+        <Style x:Key="LayoutGridStyle" TargetType="Grid">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <ImageBrush ImageSource="/Assets/Background.png"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
         <local:LocalizedStrings xmlns:local="clr-namespace:MTGWindowsPhone" x:Key="LocalizedStrings"/>
     </Application.Resources>
 

@@ -13,7 +13,7 @@ namespace MTGWindowsPhone.Entidades
 {
     public partial class Dado : PhoneApplicationPage
     {
-               
+
         public Dado()
         {
             InitializeComponent();
@@ -21,10 +21,29 @@ namespace MTGWindowsPhone.Entidades
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            BitmapImage Img;
+
+            Storyboard1.Begin();
+
+            //for (int roll = 1; roll <= 20; roll++)
+            //{
+
+            //    Img = new BitmapImage(new Uri(@"/Assets/Dado/dice" + roll.ToString() + ".png", UriKind.Relative));
+            //    dice1.Source = Img;
+            //    System.Threading.Thread.Sleep(500);
+
+            //}
+
             Random num = new Random();
             int Number = num.Next(1, 20);
-            BitmapImage Img = new BitmapImage(new Uri(@"/Assets/Dado/dice" + Number.ToString() + ".png", UriKind.Relative));
+            Img = new BitmapImage(new Uri(@"/Assets/Dado/dice" + Number.ToString() + ".png", UriKind.Relative));
             dice1.Source = Img;
+
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            // Storyboard1.Begin();
         }
     }
 }

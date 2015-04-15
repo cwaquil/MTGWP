@@ -12,9 +12,49 @@
     SupportedOrientations="Portrait" Orientation="Portrait"
     mc:Ignorable="d"
     shell:SystemTray.IsVisible="True">
+    <phone:PhoneApplicationPage.Resources>
+        <Storyboard x:Name="Rolling">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="dice1">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="4.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="3.4E-05"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-0.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="1.5"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="dice1">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="-75"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="-196.499"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-147.999"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="0.001"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Name="Storyboard1">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="dice1">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="-97.985"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-204.415"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="-305.906"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="277.06"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="137.09"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.4" Value="-346.431"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.8" Value="0.069"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="dice1">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="-228"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="229.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="-226.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="235.458"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="-228.042"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.4" Value="-9.042"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.8" Value="1.458"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </phone:PhoneApplicationPage.Resources>
 
     <!--LayoutRoot is the root grid where all page content is placed-->
-    <Grid x:Name="LayoutRoot" Background="Transparent">
+    <Grid x:Name="LayoutRoot" Style="{StaticResource LayoutGridStyle}">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
@@ -28,10 +68,14 @@
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-        	<Image Margin="108,216,108,240" Name="dice1" Source="/Assets/Dado/dice1.png" Stretch="Fill"/>
-        	<Button Content="Roll Dice"
+            <Image Margin="108,216,108,240" Name="dice1" Source="/Assets/Dado/dice1.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5">
+                <Image.RenderTransform>
+                    <CompositeTransform/>
+                </Image.RenderTransform>
+            </Image>
+            <Button Content="Roll Dice"
                     HorizontalAlignment="Left"
-                    Margin="160,555,0,0"
+                    Margin="160,461,0,0"
                     VerticalAlignment="Top"
                     Click="Button_Click" />
         </Grid>

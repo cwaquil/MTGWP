@@ -14,7 +14,7 @@
     shell:SystemTray.IsVisible="True">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
-    <Grid x:Name="LayoutRoot" Background="Transparent">
+    <Grid x:Name="LayoutRoot" Style="{StaticResource LayoutGridStyle}">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
@@ -28,12 +28,12 @@
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <TextBlock HorizontalAlignment="Center" Margin="97,10,81,638" TextWrapping="Wrap" Text="Desenvolvedores:" VerticalAlignment="Center" FontSize="36"/>
-            <TextBlock HorizontalAlignment="Center" Margin="79,93,81,571" TextWrapping="Wrap" Text="Ronaldo Faraone RM 46586" VerticalAlignment="Center" FontSize="24" Width="296"/>
-            <TextBlock HorizontalAlignment="Center" Margin="79,130,81,534" TextWrapping="Wrap" Text="Caio Waquil RM 46475" VerticalAlignment="Center" FontSize="24" Width="296"/>
-            <TextBlock HorizontalAlignment="Center" Margin="79,167,81,497" TextWrapping="Wrap" Text="Maurício Frasson RM 47126" VerticalAlignment="Center" FontSize="24" Width="296"/>
-            <TextBlock HorizontalAlignment="Center" Margin="79,204,81,460" TextWrapping="Wrap" Text="Daniel Jordão RM 46795" VerticalAlignment="Center" FontSize="24" Width="296"/>
-            <TextBlock HorizontalAlignment="Center" Margin="79,241,81,423" TextWrapping="Wrap" Text="Rodrigo Portela RM 46531" VerticalAlignment="Center" FontSize="24" Width="296"/>
+            <TextBlock HorizontalAlignment="Center" Margin="90,96,82,552" TextWrapping="Wrap" Text="Desenvolvedores:" VerticalAlignment="Center" FontSize="36" Width="284"/>
+            <TextBlock HorizontalAlignment="Center" Margin="86,225,74,439" TextWrapping="Wrap" Text="Ronaldo Faraone RM 46586" VerticalAlignment="Center" FontSize="24" Width="296"/>
+            <TextBlock HorizontalAlignment="Center" Margin="110,280,50,384" TextWrapping="Wrap" Text="Caio Waquil RM 46475" VerticalAlignment="Center" FontSize="24" Width="296"/>
+            <TextBlock HorizontalAlignment="Center" Margin="86,332,74,332" TextWrapping="Wrap" Text="Maurício Frasson RM 47126" VerticalAlignment="Center" FontSize="24" Width="296"/>
+            <TextBlock HorizontalAlignment="Center" Margin="109,378,51,286" TextWrapping="Wrap" Text="Daniel Jordão RM 46795" VerticalAlignment="Center" FontSize="24" Width="296"/>
+            <TextBlock HorizontalAlignment="Center" Margin="99,426,61,238" TextWrapping="Wrap" Text="Rodrigo Portela RM 46531" VerticalAlignment="Center" FontSize="24" Width="296"/>
 
 
 
