@@ -61,7 +61,7 @@
                 <CheckBox x:Name="chkVermelha"
                       Content="Vermelha"
                       Checked="chkVermelha_Checked"
-                      Margin="196,230,122,393" />
+                      Margin="196,230,98,393" />
 
                 <TextBlock Text="Força:" TextWrapping="Wrap" Margin="34,307,363,350" />
             <toolkit:ListPicker Margin="98,289,307,340"

@@ -95,6 +95,9 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Assets\Dado\Dados.cs" />
+    <Compile Include="PopupSplash.xaml.cs">
+      <DependentUpon>PopupSplash.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Visualizacoes\Buscar.xaml.cs">
       <DependentUpon>Buscar.xaml</DependentUpon>
     </Compile>
@@ -127,6 +130,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
+    <Page Include="PopupSplash.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Visualizacoes\Buscar.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
