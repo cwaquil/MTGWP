@@ -7,23 +7,24 @@ using System.Windows.Controls;
 using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
+using MTGWindowsPhone.Controles;
 
 namespace MTGWindowsPhone.Entidades
 {
     public partial class Buscar : PhoneApplicationPage
-    {        
-        String[] Forca = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10"};
+    {
+        String[] Forca = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" };
         String[] Resistencia = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" };
         String[] CMC = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" };
         public Buscar()
         {
             InitializeComponent();
-            
+
             this.lpkForca.ItemsSource = Forca;
             this.lpkResistencia.ItemsSource = Resistencia;
             this.lpkCMC.ItemsSource = CMC;
         }
-               
+
         private void chkBranca_Checked(object sender, RoutedEventArgs e)
         {
 
@@ -51,8 +52,9 @@ namespace MTGWindowsPhone.Entidades
 
         private void btnBuscar_Click(object sender, RoutedEventArgs e)
         {
-
+            DownloadInfoControle dic = new DownloadInfoControle();
+            dic.getCard();
         }
-       
+
     }
 }
