@@ -95,7 +95,7 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Assets\Dado\Dados.cs" />
-    <Compile Include="Controles\DownloadInfoControle.cs" />
+    <Compile Include="Controles\DownloadInfoControle2.cs" />
     <Compile Include="Entidades\Card.cs" />
     <Compile Include="Entidades\RootObject.cs" />
     <Compile Include="Entidades\Ruling.cs" />

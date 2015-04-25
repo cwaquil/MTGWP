@@ -52,7 +52,7 @@ namespace MTGWindowsPhone.Entidades
 
         private void btnBuscar_Click(object sender, RoutedEventArgs e)
         {
-            DownloadInfoControle dic = new DownloadInfoControle();
+            DownloadInfoControle2 dic = new DownloadInfoControle2();
             dic.getCard();
         }
 
