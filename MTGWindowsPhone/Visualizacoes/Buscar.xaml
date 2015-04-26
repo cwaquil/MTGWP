@@ -3,6 +3,7 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
@@ -29,24 +30,95 @@
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
             
-            <TextBlock Text="Buscar:" />
-            <TextBox x:Name="txtBuscar" Height="80" Margin="0,29,0,587" />
-                <Button x:Name="btnBuscar"
-            	Click="btnBuscar_Click"
-            	Height="150"
-            	Width="150"
-            	BorderThickness="0"
-            	Margin="157,517,149,29">
-                    <Grid>
-                        <Image x:Name="btnBuscarImage"
-                			Source="Assets/Buttons/mtgbuscar.png" />
-                    </Grid>
-                </Button>
+            <TextBlock Text="Nome:" TextWrapping="Wrap" Margin="18,0,369,666" />
+            <TextBox x:Name="txtNome" Height="70" Margin="86,-20,10,646" />
+
+            <TextBlock Text="Tipo:" TextWrapping="Wrap" Margin="19,66,370,600" />
+            <TextBox x:Name="txtTipo" Height="70" Margin="86,44,10,582" />
+
+            <TextBlock Text="Subtipo:" TextWrapping="Wrap" Margin="19,127,368,537" />
+            <TextBox x:Name="txtSubtipo" Height="70" Margin="86,108,10,518" />
+           
+            <Grid>
+                
+            <TextBlock Text="Cores:" TextWrapping="Wrap" Margin="18,198,381,469" />
+                <CheckBox x:Name="chkBranca"
+                      Content="Branca"
+                      Checked="chkBranca_Checked"
+                      Margin="75,174,243,449" />
+                <CheckBox x:Name="chkPreta"
+                      Content="Preta"
+                      Checked="chkPreta_Checked"
+                      Margin="196,174,122,449" />
+                <CheckBox x:Name="chkAzul"
+                      Content="Azul"
+                      Checked="chkAzul_Checked"
+                      Margin="302,174,16,449" />
+                <CheckBox x:Name="chkVerde"
+                      Content="Verde"
+                      Checked="chkVerde_Checked"
+                      Margin="75,230,243,393" />
+                <CheckBox x:Name="chkVermelha"
+                      Content="Vermelha"
+                      Checked="chkVermelha_Checked"
+                      Margin="196,230,98,393" />
+
+                <TextBlock Text="Força:" TextWrapping="Wrap" Margin="34,307,363,350" />
+            <toolkit:ListPicker Margin="98,289,307,340"
+                                FullModeItemTemplate="{Binding lpkFullItemTemplateForca}"
+                                ItemTemplate="{Binding lpkItemTemplateForca}"
+                                x:Name="lpkForca"/>
+
+            <TextBlock Text="Resistência:" TextWrapping="Wrap" Margin="100,362,253,295" />
+            <toolkit:ListPicker Margin="210,345,195,284"
+                                FullModeItemTemplate="{Binding lpkFullItemTemplateResistencia}"
+                                ItemTemplate="{Binding lpkItemTemplateResistencia}"
+                                x:Name="lpkResistencia"/>
+            
+            <TextBlock Text="CMC:" TextWrapping="Wrap" Margin="270,414,127,243" />
+            <toolkit:ListPicker Margin="334,397,71,232"
+                                FullModeItemTemplate="{Binding lpkFullItemTemplateCMC}"
+                                ItemTemplate="{Binding lpkItemTemplateCMC}"
+                                x:Name="lpkCMC"/>
+                
+            </Grid>
+            <Button Content="Buscar"
+                    HorizontalAlignment="Left"
+                    Margin="160,461,0,0"
+                    VerticalAlignment="Top"
+                    Click="btnBuscar_Click">
+            </Button>
                 
             
 
 
         </Grid>
     </Grid>
+    <phone:PhoneApplicationPage.Resources>
+        <DataTemplate x:Name="lpkItemTemplateCores">
+            <TextBlock Text="{Binding Cores}" />
+        </DataTemplate>
+        <DataTemplate x:Name="lpkFullItemTemplateCores">
+            <TextBlock Text="{Binding Cores}" />
+        </DataTemplate>
+        <DataTemplate x:Name="lpkItemTemplateForca">
+            <TextBlock Text="{Binding Forca}" />
+        </DataTemplate>
+        <DataTemplate x:Name="lpkFullItemTemplateForca">
+            <TextBlock Text="{Binding Forca}" />
+        </DataTemplate>
+        <DataTemplate x:Name="lpkItemTemplateResistencia">
+            <TextBlock Text="{Binding Resistencia}" />
+        </DataTemplate>
+        <DataTemplate x:Name="lpkFullItemTemplateResistencia">
+            <TextBlock Text="{Binding Resistencia}" />
+        </DataTemplate>
+        <DataTemplate x:Name="lpkItemTemplateCMC">
+            <TextBlock Text="{Binding CMC}" />
+        </DataTemplate>
+        <DataTemplate x:Name="lpkFullItemTemplateCMC">
+            <TextBlock Text="{Binding CMC}" />
+        </DataTemplate>
+    </phone:PhoneApplicationPage.Resources>
 
 </phone:PhoneApplicationPage>
