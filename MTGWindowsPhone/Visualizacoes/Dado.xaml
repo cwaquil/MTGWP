@@ -13,24 +13,10 @@
     mc:Ignorable="d"
     shell:SystemTray.IsVisible="True">
     <phone:PhoneApplicationPage.Resources>
-        <Storyboard x:Name="Rolling">
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="dice1">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="4.5"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="3.4E-05"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-0.5"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="1.5"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="dice1">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="-75"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="-196.499"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-147.999"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="0.001"/>
-            </DoubleAnimationUsingKeyFrames>
-        </Storyboard>
-        <Storyboard x:Name="Storyboard1">
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" Storyboard.TargetName="dice1">
+        <!--<Storyboard x:Name="Storyboard_Dice_1">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" 
+                                           Storyboard.TargetName="dice1"
+                                           x:Name="myDoubleAnimationUsingKeyFrames_Y">
                 <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="-97.985"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-204.415"/>
@@ -40,7 +26,9 @@
                 <EasingDoubleKeyFrame KeyTime="0:0:2.4" Value="-346.431"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:2.8" Value="0.069"/>
             </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="dice1">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" 
+                                           Storyboard.TargetName="dice1"
+                                           x:Name="myDoubleAnimationUsingKeyFrames_X">
                 <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="-228"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="229.5"/>
@@ -50,9 +38,41 @@
                 <EasingDoubleKeyFrame KeyTime="0:0:2.4" Value="-9.042"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:2.8" Value="1.458"/>
             </DoubleAnimationUsingKeyFrames>
-        </Storyboard>
+        </Storyboard>-->
+    	<Storyboard x:Name="Storyboard_Dice">
+    		<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" 
+                                           Storyboard.TargetName="dice1"
+                                           x:Name="myDoubleAnimationUsingKeyFrames_X">
+    			<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-360"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:1" Value="338"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="-338"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:2" Value="346"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="-340"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:3" Value="20"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:3.5" Value="10.5"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:4" Value="352.5"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:4.5" Value="3"/>
+    		</DoubleAnimationUsingKeyFrames>
+    		<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)" 
+                                           Storyboard.TargetName="dice1"
+                                           x:Name="myDoubleAnimationUsingKeyFrames_Y">
+    			<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-108"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:1" Value="-188"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="-350"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:2" Value="260"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="178"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:3" Value="-507.5"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:3.5" Value="479.5"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:4" Value="-32.5"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:4.5" Value="0.5"/>
+    		</DoubleAnimationUsingKeyFrames>
+    	</Storyboard>
     </phone:PhoneApplicationPage.Resources>
 
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <!--LayoutRoot is the root grid where all page content is placed-->
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot" Style="{StaticResource LayoutGridStyle}">
         <Grid.RowDefinitions>
@@ -68,10 +88,18 @@
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <Image Margin="108,216,108,240" Name="dice1" Source="/Assets/Dado/dice1.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5">
-                <Image.RenderTransform>
-                    <CompositeTransform/>
-                </Image.RenderTransform>
+            <Image Margin="108,216,108,240" x:Name="dice1" Source="/Assets/Dado/dice1.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5" CacheMode="BitmapCache">
+            	<Image.RenderTransform>
+            		<CompositeTransform/>
+            	</Image.RenderTransform>
+                <!--<Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>-->
             </Image>
             <Button Content="Roll Dice"
                     HorizontalAlignment="Left"
