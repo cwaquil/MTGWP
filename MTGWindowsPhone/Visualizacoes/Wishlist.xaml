@@ -45,5 +45,17 @@
             </ListBox>
          </Grid>
     </Grid>
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="Assets/Buttons/add.png"
+                                            Text="Adicionar"
+                                            x:Name="btnAdd"
+                                            Click="btnAdd_Click"/>
+            <shell:ApplicationBarIconButton IconUri="Assets/Buttons/delete.png"
+                                            Text="Excluir"
+                                            x:Name="btnDel"
+                                            Click="btnDel_Click" />
 
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
 </phone:PhoneApplicationPage>

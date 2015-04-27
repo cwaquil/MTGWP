@@ -44,5 +44,30 @@ namespace MTGWindowsPhone.Entidades
             }
             lstCartas.ItemsSource = listaCartas;
         }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Visualizacoes/Buscar.xaml?titulo=",
+                UriKind.RelativeOrAbsolute));
+        }
+
+        private void btnDel_Click(object sender, EventArgs e)
+        {
+            var _action = MessageBox.Show("Deseja remover a carta da lista?",
+                "Atenção", MessageBoxButton.OKCancel);
+
+            if (_action == MessageBoxResult.OK)
+            {
+                //using (var _context = new CardContext(_connectionString))
+                //{
+                //    Card _carta = (lstCartas.SelectedItem as Card);
+
+                //    _context.SubmitChanges();
+
+                //    _carta = null;
+                //}
+                
+            }
+        }
     }
 }

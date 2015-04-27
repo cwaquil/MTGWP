@@ -182,6 +182,8 @@
     </Content>
     <Content Include="Assets\Background.png" />
     <Content Include="Assets\BadgeLogo.png" />
+    <Content Include="Assets\Buttons\add.png" />
+    <Content Include="Assets\Buttons\delete.png" />
     <Content Include="Assets\Buttons\mtgblack.png" />
     <Content Include="Assets\Buttons\mtgblue.png" />
     <Content Include="Assets\Buttons\mtgbuscar.png" />
