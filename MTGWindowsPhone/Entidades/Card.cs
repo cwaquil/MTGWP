@@ -9,29 +9,29 @@ namespace MTGWindowsPhone.Entidades
 {
     public class Card
     {
-        int id { get; set; }
-        int relatedCardId { get; set; }
-        int setNumber { get; set; }
-        String name { get; set; }
-        String searchName { get; set; }
-        String description { get; set; }
-        String flavor { get; set; }
-        String[] colors { get; set; }
-        String manacost { get; set; }
-        int convertedManaCost { get; set; }
-        String cardSetName { get; set; }
-        String type { get; set; }
-        String subType { get; set; }
-        int power { get; set; }
-        int toughness { get; set; }
-        int loyalty { get; set; }
-        String rarity { get; set; }
-        String artist { get; set; }
-        String cardSetId { get; set; }
-        bool token { get; set; }
-        bool promo { get; set; }
-        Ruling[] rulings { get; set; }
-        Format[] formats { get; set; }
-        DateTime releasedAt { get; set; }
+        public string id { get; set; }
+        public int relatedCardId { get; set; }
+        public int setNumber { get; set; }
+        public string name { get; set; }
+        public string searchName { get; set; }
+        public string description { get; set; }
+        public string flavor { get; set; }
+        public string colors { get; set; }
+        public string manacost { get; set; }
+        public int convertedManaCost { get; set; }
+        public string cardSetName { get; set; }
+        public string type { get; set; }
+        public string subType { get; set; }
+        public int power { get; set; }
+        public int toughness { get; set; }
+        public int loyalty { get; set; }
+        public string rarity { get; set; }
+        public string artist { get; set; }
+        public string cardSetId { get; set; }
+        public bool token { get; set; }
+        public bool promo { get; set; }
+        public Ruling[] rulings { get; set; }
+        public Format[] formats { get; set; }
+        public DateTime releasedAt { get; set; }
     }
 }
