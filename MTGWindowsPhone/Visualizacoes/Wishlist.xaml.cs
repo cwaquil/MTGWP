@@ -35,12 +35,12 @@ namespace MTGWindowsPhone.Entidades
             {
                 Card carta = new Card()
                 {
-                    id = card.Element("id").Value,
+                    id = int.Parse(card.Element("id").Value),
                     name = card.Element("name").Value,
-                    colors = card.Element("colors").Value,
+                    colors = new List<string>(),//                  card.Element("colors").Value,
                     type = card.Element("type").Value
                 };
-            listaCartas.Add(carta);
+                listaCartas.Add(carta);
             }
             lstCartas.ItemsSource = listaCartas;
         }
@@ -66,7 +66,7 @@ namespace MTGWindowsPhone.Entidades
 
                 //    _carta = null;
                 //}
-                
+
             }
         }
     }

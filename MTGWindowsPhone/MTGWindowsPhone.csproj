@@ -98,7 +98,7 @@
     <Compile Include="Assets\Dado\Dados.cs" />
     <Compile Include="Controles\DownloadInfoControle2.cs" />
     <Compile Include="Entidades\Card.cs" />
-    <Compile Include="Entidades\RootObject.cs" />
+    <Compile Include="Entidades\Format.cs" />
     <Compile Include="Entidades\Ruling.cs" />
     <Compile Include="ModelView\CardModelView.cs" />
     <Compile Include="Model\CardModel.cs" />
