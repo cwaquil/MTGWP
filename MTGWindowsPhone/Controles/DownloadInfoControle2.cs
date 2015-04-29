@@ -45,9 +45,6 @@ namespace MTGWindowsPhone.Controles
                     }
 
                 }
-
-
-
             }
         }
 

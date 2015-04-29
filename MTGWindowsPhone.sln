@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.22310.1
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MTGWindowsPhone", "MTGWindowsPhone\MTGWindowsPhone.csproj", "{57691C62-9FD1-4AF4-86A6-BCC00956327E}"
 EndProject
@@ -15,9 +15,9 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{57691C62-9FD1-4AF4-86A6-BCC00956327E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{57691C62-9FD1-4AF4-86A6-BCC00956327E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{57691C62-9FD1-4AF4-86A6-BCC00956327E}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{57691C62-9FD1-4AF4-86A6-BCC00956327E}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{57691C62-9FD1-4AF4-86A6-BCC00956327E}.Debug|Any CPU.Build.0 = Debug|x86
+		{57691C62-9FD1-4AF4-86A6-BCC00956327E}.Debug|Any CPU.Deploy.0 = Debug|x86
 		{57691C62-9FD1-4AF4-86A6-BCC00956327E}.Debug|ARM.ActiveCfg = Debug|ARM
 		{57691C62-9FD1-4AF4-86A6-BCC00956327E}.Debug|ARM.Build.0 = Debug|ARM
 		{57691C62-9FD1-4AF4-86A6-BCC00956327E}.Debug|ARM.Deploy.0 = Debug|ARM
