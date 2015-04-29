@@ -76,6 +76,9 @@ namespace MTGWindowsPhone.Entidades
                 colors.Add("red");
             }
             List<Card> cardList = await dic.getFilteredCards(this.txtNome.Text, this.txtTipo.Text, this.txtSubtipo.Text, colors, this.lpkForca.SelectedItem.ToString(), this.lpkResistencia.SelectedItem.ToString(), this.lpkCMC.SelectedItem.ToString());
+            dic.getCard();
+            NavigationService.Navigate(new Uri("/Visualizacoes/resultadoBusca.xaml?titulo=",
+                UriKind.RelativeOrAbsolute));
         }
 
     }
