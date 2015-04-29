@@ -9,11 +9,15 @@ using Microsoft.Phone.Shell;
 using MTGWindowsPhone.Resources;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.IO;
+using MTGWindowsPhone.Entidades;
 
 namespace MTGWindowsPhone
 {
     public partial class App : Application
     {
+        public string DBPath { get; set; }
+
         /// <summary>
         /// Provides easy access to the root frame of the Phone Application.
         /// </summary>
@@ -75,6 +79,27 @@ namespace MTGWindowsPhone
         // This code will not execute when the application is first launched
         private void Application_Activated(object sender, ActivatedEventArgs e)
         {
+            // Get a reference to the SQLite database
+            this.DBPath = Path.Combine(Windows.Storage.ApplicationData.Current.LocalFolder.Path, "wishlist.sqlite");
+            /*
+            using (ToDoDataContext db = new ToDoDataContext("isostore:/wishlist.sdf"))
+            {
+                if (db.DatabaseExists() == false)
+                {
+                    // Create the database.
+                    db.CreateDatabase();
+                }
+            }
+             * */
+
+            // Initialize the database if necessary
+            /*
+            using (var db = new SQLite.SQLiteConnection(this.DBPath))
+            {
+                // Create the tables if they don't exist
+                db.CreateTable<Card>();
+            }
+             */
         }
 
         // Code to execute when the application is deactivated (sent to background)
