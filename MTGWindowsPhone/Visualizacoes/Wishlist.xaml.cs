@@ -47,7 +47,7 @@ namespace MTGWindowsPhone.Entidades
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            NavigationService.Navigate(new Uri("/Visualizacoes/Buscar.xaml?titulo=",
+            NavigationService.Navigate(new Uri("/Visualizacoes/NovaCarta.xaml?titulo=",
                 UriKind.RelativeOrAbsolute));
         }
 

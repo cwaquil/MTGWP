@@ -34,8 +34,7 @@ namespace MTGWindowsPhone.Entidades
         public string cardSetId { get; set; }
         public bool token { get; set; }
         public bool promo { get; set; }
-        public List<Ruling> rulings { get; set; }
-        public List<Format> formats { get; set; }
+        public List<Ruling> rulings { get; set; }        
         public string releasedAt { get; set; }
     }
 }

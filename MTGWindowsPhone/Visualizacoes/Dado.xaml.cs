@@ -22,9 +22,9 @@ namespace MTGWindowsPhone.Entidades
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            //TimeSpan interval = TimeSpan.FromMilliseconds(2400);
+            TimeSpan interval = TimeSpan.FromMilliseconds(2400);
 
-            //Storyboard_Dice_1.Begin();
+            Storyboard_Dice.Begin();
 
             for (int i = 0; i < myDoubleAnimationUsingKeyFrames_X.KeyFrames.Count; i++)
             {

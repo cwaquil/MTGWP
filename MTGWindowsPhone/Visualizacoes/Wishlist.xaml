@@ -28,7 +28,7 @@
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <TextBlock Text="Wishlist" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <TextBlock Text="Wishlist" Margin="9,-7,0,0" HorizontalAlignment="Center" Style="{StaticResource PhoneTextTitle1Style}"/>
             <ListBox Name="lstCartas" Width="400"
                      HorizontalAlignment="Left" VerticalAlignment="Top" 
                      ScrollViewer.VerticalScrollBarVisibility="Auto">
