@@ -54,6 +54,8 @@ namespace MTGWindowsPhone.Entidades
         {
             DownloadInfoControle2 dic = new DownloadInfoControle2();
             dic.getCard();
+            NavigationService.Navigate(new Uri("/Visualizacoes/resultadoBusca.xaml?titulo=",
+                UriKind.RelativeOrAbsolute));
         }
 
     }

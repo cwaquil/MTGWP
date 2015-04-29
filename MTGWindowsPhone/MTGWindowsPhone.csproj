@@ -131,6 +131,9 @@
     <Compile Include="Visualizacoes\NovaCarta.xaml.cs">
       <DependentUpon>NovaCarta.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Visualizacoes\resultadoBusca.xaml.cs">
+      <DependentUpon>resultadoBusca.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Visualizacoes\Wishlist.xaml.cs">
       <DependentUpon>Wishlist.xaml</DependentUpon>
     </Compile>
@@ -168,6 +171,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Visualizacoes\resultadoBusca.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Visualizacoes\Wishlist.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -193,13 +200,16 @@
     <Content Include="Assets\Background.png" />
     <Content Include="Assets\BadgeLogo.png" />
     <Content Include="Assets\Buttons\add.png" />
+    <Content Include="Assets\Buttons\addto.png" />
     <Content Include="Assets\Buttons\delete.png" />
+    <Content Include="Assets\Buttons\favs.png" />
     <Content Include="Assets\Buttons\mtgblack.png" />
     <Content Include="Assets\Buttons\mtgblue.png" />
     <Content Include="Assets\Buttons\mtgbuscar.png" />
     <Content Include="Assets\Buttons\mtggreen.png" />
     <Content Include="Assets\Buttons\mtgred.png" />
     <Content Include="Assets\Buttons\mtgwhite.png" />
+    <Content Include="Assets\Buttons\search.png" />
     <Content Include="Assets\Dado\dice1.png" />
     <Content Include="Assets\Dado\dice10.png" />
     <Content Include="Assets\Dado\dice11.png" />
