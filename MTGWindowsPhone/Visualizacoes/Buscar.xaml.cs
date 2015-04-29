@@ -13,9 +13,9 @@ namespace MTGWindowsPhone.Entidades
 {
     public partial class Buscar : PhoneApplicationPage
     {
-        String[] Forca = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" };
-        String[] Resistencia = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" };
-        String[] CMC = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" };
+        String[] Forca = { "", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" };
+        String[] Resistencia = { "", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" };
+        String[] CMC = { "", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" };
         public Buscar()
         {
             InitializeComponent();
@@ -50,10 +50,34 @@ namespace MTGWindowsPhone.Entidades
 
         }
 
-        private void btnBuscar_Click(object sender, RoutedEventArgs e)
+        private async void btnBuscar_Click(object sender, RoutedEventArgs e)
         {
+
             DownloadInfoControle2 dic = new DownloadInfoControle2();
-            dic.getCard();
+            List<String> colors = new List<string>();
+            if (this.chkAzul.IsChecked == true)
+            {
+                colors.Add("blue");
+            }
+            if (this.chkBranca.IsChecked == true)
+            {
+                colors.Add("white");
+            }
+            if (this.chkPreta.IsChecked == true)
+            {
+                colors.Add("black");
+            }
+            if (this.chkVerde.IsChecked == true)
+            {
+                colors.Add("green");
+            }
+            if (this.chkVermelha.IsChecked == true)
+            {
+                colors.Add("red");
+            }
+            List<Card> cardList = await dic.getFilteredCards(this.txtNome.Text, this.txtTipo.Text, this.txtSubtipo.Text, colors, this.lpkForca.SelectedItem.ToString(), this.lpkResistencia.SelectedItem.ToString(), this.lpkCMC.SelectedItem.ToString());
+            NavigationService.Navigate(new Uri("/Visualizacoes/resultadoBusca.xaml?titulo=",
+                UriKind.RelativeOrAbsolute));
         }
 
     }

@@ -27,15 +27,35 @@
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <TextBlock HorizontalAlignment="Center" Margin="90,96,82,552" TextWrapping="Wrap" Text="Desenvolvedores:" VerticalAlignment="Center" FontSize="36" Width="284"/>
-            <TextBlock HorizontalAlignment="Center" Margin="86,225,74,439" TextWrapping="Wrap" Text="Ronaldo Faraone RM 46586" VerticalAlignment="Center" FontSize="24" Width="296"/>
-            <TextBlock HorizontalAlignment="Center" Margin="110,280,50,384" TextWrapping="Wrap" Text="Caio Waquil RM 46475" VerticalAlignment="Center" FontSize="24" Width="296"/>
-            <TextBlock HorizontalAlignment="Center" Margin="86,332,74,332" TextWrapping="Wrap" Text="Maurício Frasson RM 47126" VerticalAlignment="Center" FontSize="24" Width="296"/>
-            <TextBlock HorizontalAlignment="Center" Margin="109,378,51,286" TextWrapping="Wrap" Text="Daniel Jordão RM 46795" VerticalAlignment="Center" FontSize="24" Width="296"/>
-            <TextBlock HorizontalAlignment="Center" Margin="99,426,61,238" TextWrapping="Wrap" Text="Rodrigo Portela RM 46531" VerticalAlignment="Center" FontSize="24" Width="296"/>
-
-
+        <Grid x:Name="ContentPanel0" Grid.Row="1" Margin="12,0,12,632">
+            <TextBlock Height="50" Text="Informações:" HorizontalAlignment="Center" FontSize="36" Width="Auto" />
+        </Grid>
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,64,12,178">
+           
+            <ScrollViewer Name="scrollViewer1" HorizontalScrollBarVisibility="Auto" Grid.Row="1">
+                <StackPanel Height="Auto" Name="stackPanel1" Width="Auto">
+                    <TextBlock Height="50" Name="txt1" Text="Desenvolvedores:" HorizontalAlignment="Center" FontSize="28" Width="Auto" />
+                    <TextBlock Height="50" Name="txt2" Text="Ronaldo Faraone RM 46586" HorizontalAlignment="Center" Width="Auto" />
+                    <TextBlock Height="50" Name="txt3" Text="Caio Waquil RM 46475" HorizontalAlignment="Center" Width="Auto" />
+                    <TextBlock Height="50" Name="txt4" Text="Maurício Frasson RM 47126" HorizontalAlignment="Center" Width="Auto" />
+                    <TextBlock Height="50" Name="txt5" Text="Daniel Jordão RM 46795" HorizontalAlignment="Center" Width="Auto" />
+                    <TextBlock Height="50" Name="txt6" Text="Rodrigo Portela RM 46531" HorizontalAlignment="Center" Width="Auto" />
+                    <TextBlock Height="Auto" Name="txt7" Text="Aplicativo de suporte para jogares" HorizontalAlignment="Center" Width="Auto" />
+                    <TextBlock Height="Auto" Name="txt8" Text="de Magic The Gathering®, desenvolvido pelos" HorizontalAlignment="Center" Width="Auto" />
+                    <TextBlock Height="Auto" Name="txt9" Text="alunos do curso de Desenvolvimento de" HorizontalAlignment="Center" Width="Auto" />
+                    <TextBlock Height="Auto" Name="txt10" Text=" Aplicativos e Games da FIAP, do curso 5MOB" HorizontalAlignment="Center" Width="Auto" />
+                    <TextBlock Height="Auto" Name="txt11" Text="O aplicativo foi desenvolvido como projeto" HorizontalAlignment="Center" Width="Auto" />
+                    <TextBlock Height="Auto" Name="txt12" Text="de conclusão da matéria de Projeto de" HorizontalAlignment="Center" Width="Auto" />
+                    <TextBlock Height="Auto" Name="txt13" Text="Aplicação Windows Phone," HorizontalAlignment="Center" Width="Auto" />
+                    <TextBlock Height="Auto" Name="txt14" Text="ministrada pelo professor Flávio Mariotti" HorizontalAlignment="Center" Width="Auto" />
+                    <TextBlock Height="Auto" Name="txt15" Text="Todas as imagens, referências e conteúdo" HorizontalAlignment="Center" Width="Auto" />
+                    <TextBlock Height="Auto" Name="txt16" Text="são de propriedade exclusiva de" HorizontalAlignment="Center" Width="Auto" />
+                    <TextBlock Height="Auto" Name="txt17" Text="© 1995-2015 Wizards of the Coast LLC," HorizontalAlignment="Center" Width="Auto" />
+                    <TextBlock Height="Auto" Name="txt18" Text=" a subsidiary of Hasbro, Inc." HorizontalAlignment="Center" Width="Auto" />
+                    <TextBlock Height="Auto" Name="txt19" Text=" All Rights Reserved." HorizontalAlignment="Center" Width="Auto" />
+                    
+                </StackPanel>
+            </ScrollViewer>
 
         </Grid>
     </Grid>
