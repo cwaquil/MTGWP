@@ -27,15 +27,14 @@ namespace MTGWindowsPhone.Visualizacoes
 
             if (_action == MessageBoxResult.OK)
             {
-                this.CardMV.Save();
+                this.CardMV.Save("", "", "", "");
 
             }
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            NavigationService.Navigate(new Uri("/Visualizacoes/Buscar.xaml?titulo=",
-                UriKind.RelativeOrAbsolute));
+            NavigationService.Navigate(new Uri("/Visualizacoes/Buscar.xaml?titulo=", UriKind.RelativeOrAbsolute));
         }
     }
 }

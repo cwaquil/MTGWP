@@ -52,7 +52,7 @@ namespace MTGWindowsPhone.Model
             get { return _subtype; }
             set
             {
-                _type = value;
+                _subtype = value;
                 EventPropertyChanged("Subtype");
             }
         }

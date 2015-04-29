@@ -8,41 +8,27 @@ using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using System.Xml.Linq;
+using MTGWindowsPhone.ModelView;
 
 namespace MTGWindowsPhone.Entidades
 {
     public partial class Wishlist : PhoneApplicationPage
     {
+        private CardModelView CardMV;
+
         List<Card> listaCartas = new List<Card>();
         public Wishlist()
         {
             InitializeComponent();
 
-            WebClient webCartas = new WebClient();
-            webCartas.DownloadStringCompleted += webCartas_DownloadStringCompleted;
+            this.CardMV = new CardModelView();
+            //this.CardMV.GetWishlist();  Remover
+            //this.CardMV.SaveIsolated();  Remover
+            this.CardMV.GetIsolated();
 
-            Uri jsonFile = new Uri("http://api.mtgdb.info");
+            this.DataContext = from card in CardMV.Wishlist
+                               select card;
 
-        }
-
-        void webCartas_DownloadStringCompleted(object sender, DownloadStringCompletedEventArgs e)
-        {
-            if (e.Error != null) return;
-
-            XElement jsonCarta = XElement.Parse(e.Result);
-
-            foreach (XElement card in jsonCarta.Elements("Card"))
-            {
-                Card carta = new Card()
-                {
-                    id = int.Parse(card.Element("id").Value),
-                    name = card.Element("name").Value,
-                    colors = new List<string>(),//                  card.Element("colors").Value,
-                    type = card.Element("type").Value
-                };
-                listaCartas.Add(carta);
-            }
-            lstCartas.ItemsSource = listaCartas;
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -51,6 +37,15 @@ namespace MTGWindowsPhone.Entidades
                 UriKind.RelativeOrAbsolute));
         }
 
+
+        private void btnAddCard_Click(object sender, EventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Visualizacoes/NovaCarta.xaml?titulo=",
+                UriKind.RelativeOrAbsolute));
+        }
+
+
+
         private void btnDel_Click(object sender, EventArgs e)
         {
             var _action = MessageBox.Show("Deseja remover a carta da lista?",
@@ -58,15 +53,7 @@ namespace MTGWindowsPhone.Entidades
 
             if (_action == MessageBoxResult.OK)
             {
-                //using (var _context = new CardContext(_connectionString))
-                //{
-                //    Card _carta = (lstCartas.SelectedItem as Card);
-
-                //    _context.SubmitChanges();
-
-                //    _carta = null;
-                //}
-
+                this.CardMV.Remove(sender.ToString()); // Todo:Enviar o nome da carta
             }
         }
     }

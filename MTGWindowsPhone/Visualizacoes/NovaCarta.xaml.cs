@@ -25,7 +25,13 @@ namespace MTGWindowsPhone.Visualizacoes
 
         private void Salvar_Click(object sender, RoutedEventArgs e)
         {
-            this.CardMV.Save();
+            if (txtNome.Text == "" || txtTipo.Text == "" || txtSubtipo.Text == "" || txtCor.Text == "")
+                MessageBox.Show("Preencha todos os campos!");
+
+            this.CardMV.Save(txtNome.Text, txtTipo.Text, txtSubtipo.Text, txtCor.Text);
+
+            NavigationService.Navigate(new Uri("/Visualizacoes/Wishlist.xaml?titulo=",
+                UriKind.RelativeOrAbsolute));
         }
 
 
