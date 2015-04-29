@@ -68,6 +68,18 @@
     			<EasingDoubleKeyFrame KeyTime="0:0:4" Value="-32.5"/>
     			<EasingDoubleKeyFrame KeyTime="0:0:4.5" Value="0.5"/>
     		</DoubleAnimationUsingKeyFrames>
+    		<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)" Storyboard.TargetName="dice1">
+    			<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="90"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:1" Value="180"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="270"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:2" Value="0"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="90"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:3" Value="180"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:3.5" Value="270"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:4" Value="310"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:4.5" Value="0"/>
+    		</DoubleAnimationUsingKeyFrames>
     	</Storyboard>
     </phone:PhoneApplicationPage.Resources>
 
@@ -92,14 +104,7 @@
             	<Image.RenderTransform>
             		<CompositeTransform/>
             	</Image.RenderTransform>
-                <!--<Image.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </Image.RenderTransform>-->
+                
             </Image>
             <Button Content="Roll Dice"
                     HorizontalAlignment="Left"
