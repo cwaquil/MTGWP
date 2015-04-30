@@ -29,7 +29,7 @@
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
             <TextBlock Text="Cartas" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
-            <ListBox Name="resultadoCartas" Width="400"
+            <ListBox x:Name="resultadoCartas" Width="400"
                      HorizontalAlignment="Left" VerticalAlignment="Top" 
                      ScrollViewer.VerticalScrollBarVisibility="Auto">
                 <ListBox.ItemTemplate>

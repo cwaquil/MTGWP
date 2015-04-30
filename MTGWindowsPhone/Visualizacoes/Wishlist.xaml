@@ -29,8 +29,8 @@
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
             <TextBlock Text="Wishlist" Margin="9,-7,0,0" HorizontalAlignment="Center" Style="{StaticResource PhoneTextTitle1Style}"/>
-            <ListBox Name="lstCartas" Width="400"
-                     HorizontalAlignment="Left"  Margin="0 0 0 17"
+            <ListBox Name="lstCartas" Width="404"
+                     HorizontalAlignment="Left"  Margin="25,79,0,155"
                      ScrollViewer.VerticalScrollBarVisibility="Auto" ItemsSource="{Binding}">
                 <ListBox.ItemTemplate>
                     <DataTemplate >
@@ -47,14 +47,14 @@
     </Grid>
     <phone:PhoneApplicationPage.ApplicationBar>
         <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
-            <shell:ApplicationBarIconButton IconUri="Assets/Buttons/add.png"
-                                            Text="Adicionar"
+            <shell:ApplicationBarIconButton IconUri="Assets/Buttons/search.png"
+                                            Text="Buscar"
                                             x:Name="btnAdd"
                                             Click="btnAdd_Click"/>
 
 
             <shell:ApplicationBarIconButton IconUri="Assets/Buttons/add.png"
-                                            Text="Adicionar Carta"
+                                            Text="Adicionar"
                                             x:Name="btnAddCard"
                                             Click="btnAddCard_Click"/>
             

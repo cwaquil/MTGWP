@@ -38,5 +38,7 @@ namespace MTGWindowsPhone.Entidades
         public List<Ruling> rulings { get; set; }
         //public List<Format> formats { get; set; }
         public string releasedAt { get; set; }
+
+        }
     }
-}
+
