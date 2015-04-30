@@ -8,6 +8,7 @@ using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using MTGWindowsPhone.Controles;
+using MTGWindowsPhone.Data;
 
 namespace MTGWindowsPhone.Entidades
 {
@@ -53,7 +54,7 @@ namespace MTGWindowsPhone.Entidades
         private async void btnBuscar_Click(object sender, RoutedEventArgs e)
         {
 
-            DownloadInfoControle2 dic = new DownloadInfoControle2();
+
             List<String> colors = new List<string>();
             if (this.chkAzul.IsChecked == true)
             {
@@ -75,7 +76,11 @@ namespace MTGWindowsPhone.Entidades
             {
                 colors.Add("red");
             }
-            List<Card> cardList = await dic.getFilteredCards(this.txtNome.Text, this.txtTipo.Text, this.txtSubtipo.Text, colors, this.lpkForca.SelectedItem.ToString(), this.lpkResistencia.SelectedItem.ToString(), this.lpkCMC.SelectedItem.ToString());
+            
+            BuscaCardTO bcTO = new BuscaCardTO(this.txtNome.Text, this.txtTipo.Text, this.txtSubtipo.Text, colors, this.lpkForca.SelectedItem.ToString(), this.lpkResistencia.SelectedItem.ToString(), this.lpkCMC.SelectedItem.ToString());
+
+            PhoneApplicationService.Current.State["param"] = bcTO;
+
             NavigationService.Navigate(new Uri("/Visualizacoes/resultadoBusca.xaml?titulo=",
                 UriKind.RelativeOrAbsolute));
         }

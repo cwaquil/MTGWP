@@ -8,6 +8,9 @@ using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using MTGWindowsPhone.ModelView;
+using MTGWindowsPhone.Data;
+using MTGWindowsPhone.Entidades;
+using MTGWindowsPhone.Controles;
 
 namespace MTGWindowsPhone.Visualizacoes
 {
@@ -18,6 +21,15 @@ namespace MTGWindowsPhone.Visualizacoes
         {
             InitializeComponent();
             this.CardMV = new CardModelView();
+            BuscaCardTO bcTO = PhoneApplicationService.Current.State["param"] as BuscaCardTO;
+            loadCardList(bcTO);
+        }
+
+        private async void loadCardList(BuscaCardTO bcTO)
+        {
+            DownloadInfoControle2 dic = new DownloadInfoControle2();
+            List<Card> cardList = await dic.getFilteredCards(bcTO.name, bcTO.type, bcTO.subtype, bcTO.colors, bcTO.power, bcTO.toughness, bcTO.cmc);
+
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
