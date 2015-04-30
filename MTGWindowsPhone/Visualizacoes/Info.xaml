@@ -39,7 +39,6 @@
                     <TextBlock Height="50" Name="txt3" Text="Caio Waquil RM 46475" HorizontalAlignment="Center" Width="Auto" />
                     <TextBlock Height="50" Name="txt4" Text="Maurício Frasson RM 47126" HorizontalAlignment="Center" Width="Auto" />
                     <TextBlock Height="50" Name="txt5" Text="Daniel Jordão RM 46795" HorizontalAlignment="Center" Width="Auto" />
-                    <TextBlock Height="50" Name="txt6" Text="Rodrigo Portela RM 46531" HorizontalAlignment="Center" Width="Auto" />
                     <TextBlock Height="Auto" Name="txt7" Text="Aplicativo de suporte para jogares" HorizontalAlignment="Center" Width="Auto" />
                     <TextBlock Height="Auto" Name="txt8" Text="de Magic The Gathering®, desenvolvido pelos" HorizontalAlignment="Center" Width="Auto" />
                     <TextBlock Height="Auto" Name="txt9" Text="alunos do curso de Desenvolvimento de" HorizontalAlignment="Center" Width="Auto" />
