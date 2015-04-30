@@ -88,9 +88,6 @@
                     VerticalAlignment="Top"
                     Click="btnBuscar_Click">
             </Button>
-                
-            
-
 
         </Grid>
     </Grid>

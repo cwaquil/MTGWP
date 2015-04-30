@@ -7,6 +7,7 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using Newtonsoft.Json;
 using MTGWindowsPhone.Entidades;
+using System.Windows;
 
 namespace MTGWindowsPhone.Controles
 {
@@ -19,7 +20,7 @@ namespace MTGWindowsPhone.Controles
 
         public async Task<List<Card>> getFilteredCards(String name, String type, String subtype, List<String> colors, String power, String toughness, String cmc)
         {
-            using (HttpClient client = new HttpClient())
+            using (HttpClient client = new HttpClient())            
             {
                 List<Card> deserializedData = new List<Card>();
                 try
@@ -92,6 +93,7 @@ namespace MTGWindowsPhone.Controles
                         foreach (Card ro in deserializedData)
                         {
                             System.Diagnostics.Debug.WriteLine(ro.name);
+                            
                         }
 
                     }

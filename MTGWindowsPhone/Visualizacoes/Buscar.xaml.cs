@@ -80,9 +80,9 @@ namespace MTGWindowsPhone.Entidades
             BuscaCardTO bcTO = new BuscaCardTO(this.txtNome.Text, this.txtTipo.Text, this.txtSubtipo.Text, colors, this.lpkForca.SelectedItem.ToString(), this.lpkResistencia.SelectedItem.ToString(), this.lpkCMC.SelectedItem.ToString());
 
             PhoneApplicationService.Current.State["param"] = bcTO;
-
+            
             NavigationService.Navigate(new Uri("/Visualizacoes/resultadoBusca.xaml?titulo=",
-                UriKind.RelativeOrAbsolute));
+            UriKind.RelativeOrAbsolute));
         }
 
     }

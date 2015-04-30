@@ -13,14 +13,14 @@ namespace MTGWindowsPhone.Entidades
 {
     public class Card
     {
-        public int id { get; set; }
-        public int relatedCardId { get; set; }
-        public int setNumber { get; set; }
+        public string id { get; set; }
+        public string relatedCardId { get; set; }
+        public string setNumber { get; set; }
         public string name { get; set; }
         public string searchName { get; set; }
         public string description { get; set; }
         public string flavor { get; set; }
-        public List<string> colors { get; set; }
+        public List <string> colors { get; set; }
         public string manaCost { get; set; }
         public int convertedManaCost { get; set; }
         public string cardSetName { get; set; }
